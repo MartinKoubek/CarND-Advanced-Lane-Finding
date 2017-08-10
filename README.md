@@ -35,32 +35,60 @@ Any camera lens will have distortion problem. In order to fix distortion, follow
 * Camera calibration were found with cv2.calibrateCamera function
 * Each image (video frame) was calibrated
 
+Original image             |  Calibrated image
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/calibration1.jpg)   |  ![Calibrated image]( ./output_images/0_camera_calibration_1.png)
 
-![Calibration]( /output_images/calibration1.jpg"")
+Original image             |  Calibrated image
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/calibration2.jpg)   |  ![Calibrated image]( ./output_images/0_camera_calibration_2.png)
+
 
 ### Apply a distortion correction to raw images.
 
 Distortion was applied to each image (video frame).
 
+Original image             |  Calibrated image
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/1_original_image.png)   |  ![Calibrated image]( ./output_images/2_calibrated_image.png)
+
+
 ### Use color transforms, gradients, etc., to create a thresholded binary image.
 
 Color transform is key part of line detection. In the project I use a combination of S channel of HLS and L channel of LUV.
+
+Original image             |  Gradient image
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/1_original_image.png)   |  ![Calibrated image]( ./output_images/3_gradient_image.png)
+
 
 ### Apply a perspective transform to rectify binary image ("birds-eye view").
 
 The perspective transform was used by estimated parameters.
 
+Original image             |  Birds-eye view image
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/4_transform_orig_image.png)   |  ![Calibrated image]( ./output_images/4_transform_image.png)
+
+
 ### Detect lane pixels and fit to find the lane boundary.
 
 Lane detection is shown on the following picture.
 
+Detect rawly line             |  Draw line
+:-------------------------:|:-------------------------:
+![Original image]( ./output_images/5_line_detection.png)   |  ![Calibrated image]( ./output_images/6_line_determination.png)
+
+
 ### Determine the curvature of the lane and vehicle position with respect to center.
 
-Curvature detection is shown on the following picture.
+Curvature detection was done in class DetectLines, method detect.
 
 ### Warp the detected lane boundaries back onto the original image.
 
 Warped image is shown on the following picture.
+
+![Un warped image]( ./output_images/7_result.png)
 
 ### Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
