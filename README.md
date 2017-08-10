@@ -35,6 +35,9 @@ Any camera lens will have distortion problem. In order to fix distortion, follow
 * Camera calibration were found with cv2.calibrateCamera function
 * Each image (video frame) was calibrated
 
+
+![Calibration]( /output_images/calibration1.jpg"")
+
 ### Apply a distortion correction to raw images.
 
 Distortion was applied to each image (video frame).
