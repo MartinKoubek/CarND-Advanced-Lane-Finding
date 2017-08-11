@@ -96,7 +96,7 @@ The distance from the center of the lane is computed in DetectLines.detect() met
 
 Warped image is shown on the following picture.
 
-![Un warped image]( ./output_images/7_straight_lines2_result.png_1.png)
+![Un warped image]( ./output_images/7_straight_lines2_result.png)
 ![Un warped image]( ./output_images/7_test5_result.png)
 
 
