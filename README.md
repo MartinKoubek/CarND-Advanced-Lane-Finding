@@ -82,7 +82,9 @@ Detect rawly line             |  Draw line
 
 ### Determine the curvature of the lane and vehicle position with respect to center.
 
-Curvature detection was done in class DetectLines, method detect.
+Curvature detection was done by these parameters:
+* ym_per_pix = 30.48/100
+*  xm_per_pix = 3.7/100
 
 The radius of curvature is computed upon calling the DetectLines.detect() method. At the end of method curvature is 
 calculated as polynomial f(y)=A y^2 +B y + C  and the radius of curvature is given by R = [(1+(2 Ay +B)^2 )^3/2]/|2A|.
@@ -99,3 +101,24 @@ Warped image is shown on the following picture.
 
 The youtube link with a result provided here:
 https://youtu.be/s-wlc-a5e60
+
+## Discussion
+
+
+### What problems/issues did you face in your implementation of this project?
+I had a trouble with coding in python, specificly numpy arrays as I did not know what numpy functions makes with arrays.
+
+### Where will your pipeline likely fail? 
+* Low lights and large lane shadows
+* Bumbing road
+
+### What could you do to make it more robust?
+I see three crutial steps to improve in Lane detection
+* Use color transforms, gradients - this step can be very much improved by using various filters in different lighting scenarios
+* Detect lane pixels - detection of "right" pixels is very crutial as time to time "obstacles" are detected as part of line
+* Lane smoothing and filtering  - averaging lines in a time, removing "wrong" lines can rapidly improve lane detection
+
+
+
+
+
