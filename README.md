@@ -50,7 +50,7 @@ Distortion was applied to each image (video frame).
 
 Original image             |  Calibrated image
 :-------------------------:|:-------------------------:
-![Original image]( ./output_images/1_original_image.png)   |  ![Calibrated image]( ./output_images/2_calibrated_image.png)
+![Original image]( ./output_images/1_straight_lines2_original_image_1.png)   |  ![Calibrated image]( ./output_images/2_straight_lines2_calibrated_image_1.png)
 
 
 ### Use color transforms, gradients, etc., to create a thresholded binary image.
@@ -59,8 +59,8 @@ Color transform is key part of line detection. In the project I use a combinatio
 
 Original image             |  Gradient image
 :-------------------------:|:-------------------------:
-![Original image]( ./output_images/1_original_image.png)   |  ![Calibrated image]( ./output_images/3_gradient_image.png)
-
+![Original image]( ./output_images/2_straight_lines2_calibrated_image_1.png)   |  ![Calibrated image]( ./output_images/3_straight_lines2_gradient_image_1.png)
+![Original image]( ./output_images/2_test5_calibrated_image_1.png)   |  ![Calibrated image]( ./output_images/3_test5_gradient_image_1.png)
 
 ### Apply a perspective transform to rectify binary image ("birds-eye view").
 
@@ -68,7 +68,8 @@ The perspective transform was used by estimated parameters.
 
 Original image             |  Birds-eye view image
 :-------------------------:|:-------------------------:
-![Original image]( ./output_images/4_transform_orig_image.png)   |  ![Calibrated image]( ./output_images/4_transform_image.png)
+![Original image]( ./output_images/4_straight_lines2_transform_orig_1_image.png)   |  ![Calibrated image]( ./output_images/4_straight_lines2_transform_image_1.png)
+![Original image]( ./output_images/4_test5_transform_orig_1_image.png)   |  ![Calibrated image]( ./output_images/4_test1_transform_image_1.png)
 
 
 ### Detect lane pixels and fit to find the lane boundary.
@@ -77,8 +78,8 @@ Lane detection is shown on the following picture.
 
 Detect rawly line             |  Draw line
 :-------------------------:|:-------------------------:
-![Original image]( ./output_images/5_line_detection.png)   |  ![Calibrated image]( ./output_images/6_line_determination.png)
-
+![Original image]( ./output_images/5_straight_lines2_line_detection_1.png)   |  ![Calibrated image]( ./output_images/6_straight_lines2_line_determination_1.png)
+![Original image]( ./output_images/5_test5_line_detection_1.png)   |  ![Calibrated image]( ./output_images/6_test5_line_determination_1.png)
 
 ### Determine the curvature of the lane and vehicle position with respect to center.
 
@@ -95,7 +96,9 @@ The distance from the center of the lane is computed in DetectLines.detect() met
 
 Warped image is shown on the following picture.
 
-![Un warped image]( ./output_images/7_result.png)
+![Un warped image]( ./output_images/7_straight_lines2_result.png_1.png)
+![Un warped image]( ./output_images/7_test5_result.png)
+
 
 ### Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
