@@ -10,8 +10,8 @@ class PerspectiveTranform(object):
 
 
     def __init__(self):
-        self.corners_up_left = (601,445)
-        self.corners_up_right = (679,445)
+        self.corners_up_left = (600,445)
+        self.corners_up_right = (686,445)
         self.corners_dw_left = (280,660)
         self.corners_dw_right = (1038,660)
         

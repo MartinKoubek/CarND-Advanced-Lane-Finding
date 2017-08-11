@@ -195,9 +195,10 @@ class DetectLines():
             
             ym_per_pix = 3.048/275
             ym_per_pix = 30./720
+            ym_per_pix = 30.48/100
             
             xm_per_pix = 3.7/413
-            xm_per_pix = 3.7/700
+            xm_per_pix = 3.7/100
 
 
             # Calculate the new radii of curvature
@@ -228,11 +229,16 @@ class DetectLines():
                 right_center = int(np.polyval(self.my_average_polyfit_right[0], 720))
         
             lane_center_position = midpoint - (right_center + left_center)/2
-            lane_center_position *= xm_per_pix 
+            lane_center_position = lane_center_position * xm_per_pix /3 
             
-            
+            curvature = int((left_curverad+right_curverad)/2)
+            if len(self.my_left_lane_y) < 3 and len(self.my_right_lane_y) < 3:
+                curvature = 0
+
+                
+                
             self.binary_warped = cv2.cvtColor(self.binary_warped, cv2.COLOR_GRAY2BGR)
-            return int((left_curverad+right_curverad)/2), lane_center_position
+            return curvature, lane_center_position
 
     def getLaneDetection(self):
         return self.binary_warped_out

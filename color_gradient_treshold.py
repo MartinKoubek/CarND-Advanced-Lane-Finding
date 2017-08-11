@@ -225,4 +225,6 @@ class ColorGradientTreshhold(object):
 #         combined = np.zeros_like(dir_binary)
 #         combined[((gradx == 1) & (grady == 1)) | ((mag_binary == 1) & (dir_binary == 1))] = 1
 
-        return hls_binary 
+        kernel = np.ones((5, 5), np.uint8)  
+        closing = cv2.morphologyEx(hls_binary.astype(np.uint8), cv2.MORPH_CLOSE, kernel)
+        return closing 
