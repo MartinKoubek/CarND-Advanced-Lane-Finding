@@ -84,6 +84,11 @@ Detect rawly line             |  Draw line
 
 Curvature detection was done in class DetectLines, method detect.
 
+The radius of curvature is computed upon calling the DetectLines.detect() method. At the end of method curvature is 
+calculated as polynomial f(y)=A y^2 +B y + C  and the radius of curvature is given by R = [(1+(2 Ay +B)^2 )^3/2]/|2A|.
+
+The distance from the center of the lane is computed in DetectLines.detect() method, which measures the distance between center of an image and middle point of left and right line.
+
 ### Warp the detected lane boundaries back onto the original image.
 
 Warped image is shown on the following picture.
