@@ -4,6 +4,9 @@ In this project, the goal is to write a software pipeline to identify the lane b
 
 <img src="./output_images/7_test1_result.png_1.png" alt="hog" width="600">
 
+The youtube link with a result provided here:
+https://youtu.be/s-wlc-a5e60
+
 ## The Project
 ---
 
